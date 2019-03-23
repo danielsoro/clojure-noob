@@ -2,6 +2,8 @@
   (:require [clojure.test :refer :all]
             [clojure-noob.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 1 1))))
+(deftest error-message-test
+  (testing "MSG when true"
+    (is (error-message :mild) "OH GOD! IT'S A DISASTER! WE'RE MILDLY INCONVENIENCED!"))
+  (testing "MSG when false")
+    (is (error-message :aloha) "OH GOD! IT'S A DISASTER! WE'RE DOOOOOOOMED!"))
